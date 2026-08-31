@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>24班照片集</title>
+    <style>
+        
+        /* 图片统一样式：固定宽度、间距和圆角 */
+
+
+        img { width: 500px; margin: 10px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    
+    <!-- 页面标题 -->
+
+    <h1>24班照片集</h1>
+    
+    <!-- 图片会动态插入到这里 -->
+
+    <div id="image-container"></div>
+
+    <script>
+       
+       // 这里写上要展示的图片文件名，想放几张就加几项
+
+        const images = [
+        "oncjr.jpg",
+        "onzt.jpg",
+        "jtz.jpg",
+        "onfzy.jpg"
+         
+            
+        ];
+
+        // 获取图片容器节点，用来把图片插进去
+
+
+        const container = document.getElementById("image-container");
+
+        // 遍历图片列表，逐张创建 img 标签并添加到页面中
+
+
+        images.forEach(src => {
+            const img = document.createElement("img");
+            img.src = src;   // 图片路径
+            img.alt = src;   // 图片说明文字，便于阅读和无障碍
+            container.appendChild(img);
+        });
+    </script>
+</body>
+</html>
